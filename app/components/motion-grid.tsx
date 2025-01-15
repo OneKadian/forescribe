@@ -245,25 +245,26 @@ const column2 = [
     title: "ChatGPT",
     subtitle: "Project Management",
     imageUrl: "https://osdblyvwidixouibqkrf.supabase.co/storage/v1/object/public/Badminton/ChatGPT.png",
-    bgColor: "bg-gradient-to-b from-emerald-50 to-emerald-400",
+    bgColor: "bg-gradient-to-b from-[#FFFFFF] to-[#10A37F]",
   },
   {
     title: "Kate",
     subtitle: "We automatically resolve 25% of customer queries across desktop and mobile using Intercom bots.",
     imageUrl: "https://osdblyvwidixouibqkrf.supabase.co/storage/v1/object/public/Badminton/Mailchimp%20(2).png",
-    bgColor: "bg-purple-200",
+    bgColor: "bg-[#FFFFFF]",
   },
   {
     title: "QB",
     subtitle: "Project Management",
     imageUrl: "https://osdblyvwidixouibqkrf.supabase.co/storage/v1/object/public/Badminton/QuickBooks.png",
-    bgColor: "bg-gradient-to-b from-green-50 to-green-500",
+    bgColor: "bg-gradient-to-b from-[#FFFFFF] to-[#2CA01C]",
   },
   {
     title: "Ariana",
     subtitle: "We automatically resolve 25% of customer queries across desktop and mobile using Intercom bots.",
     imageUrl: "https://osdblyvwidixouibqkrf.supabase.co/storage/v1/object/public/Badminton/Mailchimp.png",
-    bgColor: "bg-indigo-900",
+    bgColor: "bg-[#FFFFFF]",
+
   },
 ];
 
@@ -272,25 +273,26 @@ const column3 = [
     title: "Notion",
     subtitle: "Project Management",
     imageUrl: "https://osdblyvwidixouibqkrf.supabase.co/storage/v1/object/public/Badminton/atlassian.png",
-    bgColor: "bg-zinc-200",
+    bgColor: "bg-gradient-to-b from-[#FFFFFF] to-[#8A8A8A]",
+    
   },
   {
     title: "Andrew",
     subtitle: "We automatically resolve 25% of customer queries across desktop and mobile using Intercom bots.",
     imageUrl: "https://osdblyvwidixouibqkrf.supabase.co/storage/v1/object/public/Badminton/Mailchimp%20(3).png",
-    bgColor: "bg-indigo-900",
+    bgColor: "bg-[#FFFFFF]",
   },
   {
     title: "Skype",
     subtitle: "Project Management",
     imageUrl: "https://osdblyvwidixouibqkrf.supabase.co/storage/v1/object/public/Badminton/Skype.png",
-    bgColor: "bg-sky-500",
+    bgColor: "bg-gradient-to-b from-[#FFFFFF] to-[#0098E3]",
   },
   {
     title: "Jack Mark",
     subtitle: "We automatically resolve 25% of customer queries across desktop and mobile using Intercom bots.",
     imageUrl: "https://osdblyvwidixouibqkrf.supabase.co/storage/v1/object/public/Badminton/Mailchimp%20(4).png",
-    bgColor: "bg-pink-200",
+    bgColor: "bg-[#FFFFFF]",
   },
 ];
 
@@ -299,25 +301,27 @@ const column4 = [
     title: "LinkedIn",
     subtitle: "Project Management",
     imageUrl: "https://osdblyvwidixouibqkrf.supabase.co/storage/v1/object/public/Badminton/LinkedIn.png",
-    bgColor: "bg-blue-500",
+    bgColor: "bg-gradient-to-b from-[#FFFFFF] to-[#0A66C2]",
+    
   },
   {
     title: "Paul",
     subtitle: "We automatically resolve 25% of customer queries across desktop and mobile using Intercom bots.",
     imageUrl: "https://osdblyvwidixouibqkrf.supabase.co/storage/v1/object/public/Badminton/Mailchimp%20(5).png",
-    bgColor: "bg-gray-700",
+    bgColor: "bg-[#FFFFFF]",
   },
   {
     title: "AWS",
     subtitle: "Project Management",
     imageUrl: "https://osdblyvwidixouibqkrf.supabase.co/storage/v1/object/public/Badminton/Amazon%20Web%20Services.png",
-    bgColor: "bg-yellow-800",
+    bgColor: "bg-gradient-to-b from-[#FFFFFF] to-[#3C434F]",
+
   },
   {
     title: "Ariana",
     subtitle: "We automatically resolve 25% of customer queries across desktop and mobile using Intercom bots.",
-    imageUrl: "",
-    bgColor: "bg-indigo-900",
+    imageUrl: "https://osdblyvwidixouibqkrf.supabase.co/storage/v1/object/public/Badminton/Mailchimp.png",
+    bgColor: "bg-[#FFFFFF]",
   },
 ];
 
@@ -326,25 +330,26 @@ const column5 = [
     title: "Canva",
     subtitle: "Project Management",
     imageUrl: "https://osdblyvwidixouibqkrf.supabase.co/storage/v1/object/public/Badminton/Canva.png",
-    bgColor: "bg-gradient-to-b from-cyan-50 to-cyan-400",
+    bgColor: "bg-gradient-to-b from-[#FFFFFF] to-[#24BECA]",
+    
   },
   {
     title: "Jane Mary",
     subtitle: "We automatically resolve 25% of customer queries across desktop and mobile using Intercom bots.",
     imageUrl: "https://osdblyvwidixouibqkrf.supabase.co/storage/v1/object/public/Badminton/Mailchimp%20(6).png",
-    bgColor: "bg-pink-200",
+    bgColor: "bg-[#FFFFFF]",
   },
   {
     title: "Chimp Monk",
     subtitle: "Project Management",
     imageUrl: "https://osdblyvwidixouibqkrf.supabase.co/storage/v1/object/public/Badminton/Pumble.png",
-    bgColor: "bg-yellow-400",
+    bgColor: "bg-gradient-to-b from-[#FFFFFF] to-[#FFE002]",
   },
   {
     title: "Jack Mark",
     subtitle: "We automatically resolve 25% of customer queries across desktop and mobile using Intercom bots.",
     imageUrl: "https://osdblyvwidixouibqkrf.supabase.co/storage/v1/object/public/Badminton/Mailchimp%20(7).png",
-    bgColor: "bg-pink-200",
+    bgColor: "bg-[#FFFFFF]",
   },
 ];
 
