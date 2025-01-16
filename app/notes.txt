@@ -1,0 +1,7 @@
+0. submit to suprdense
+1. mobile view card issue
+2. 3D card: https://ui.aceternity.com/components/3d-card-effect
+3. Homepage ( pill idea ) , contact us page 
+4. Page change transition
+5. Implement dark mode using Tailwind’s dark mode feature ( aqua BG, white text with black cards ) 
+6. Hover effects on buttons and links.
