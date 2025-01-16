@@ -146,6 +146,72 @@ const column5 = [
 
 
 // Offset className for columns to create staggered effect
+// const getColumnOffset = (index) => {
+//   switch (index) {
+//     case 1:
+//       return "lg:mt-[8vh] mt-0"; // Second column pushed down
+//     case 3:
+//       return "lg:mt-[8vh] mt-0"; // Fourth column pushed down
+//     default:
+//       return ""; // Other columns at original position
+//   }
+// };
+
+// const transformItems = (items) =>
+//   items.map(({ title, subtitle, imageUrl, bgColor }) => ({
+//     name: title,
+//     logo: imageUrl,
+//     type: subtitle,
+//     bgColor,
+//   }));
+
+// const desktopColumns = [
+//   { items: transformItems(column1), duration: 60 },
+//   { items: transformItems(column2), duration: 60 },
+//   { items: transformItems(column3), duration: 60 },
+//   { items: transformItems(column4), duration: 60 },
+//   { items: transformItems(column5), duration: 60 },
+// ];
+
+// const mobileColumns = [
+//   { items: transformItems([...column1, ...column2].slice(0, 5)), duration: 40 }, // Column 1: Forward order
+//   { items: transformItems([...column2.reverse(), ...column1].slice(0, 5)), duration: 40 }, // Column 2: Reverse order
+// ];
+
+
+// export function MotionGrid() {
+//   const [mounted, setMounted] = useState(false);
+//   const [isMobile, setIsMobile] = useState(false);
+
+//   useEffect(() => {
+//     setMounted(true);
+//     const checkMobile = () => setIsMobile(window.innerWidth < 768);
+//     checkMobile();
+//     window.addEventListener("resize", checkMobile);
+//     return () => window.removeEventListener("resize", checkMobile);
+//   }, []);
+
+//   if (!mounted) {
+//     return null;
+//   }
+
+//   const columns = isMobile ? mobileColumns : desktopColumns;
+
+//   return (
+//     <div
+//       className={`grid h-full w-full gap-2 ${
+//         isMobile ? "grid-cols-2" : "grid-cols-5"
+//       }`}
+//     >
+//       {columns.map((column, index) => (
+//         <div key={index} className={`${getColumnOffset(index)}`}>
+//           <Column items={column.items} duration={column.duration} />
+//         </div>
+//       ))}
+//     </div>
+//   );
+// }
+
 const getColumnOffset = (index) => {
   switch (index) {
     case 1:
@@ -173,9 +239,12 @@ const desktopColumns = [
   { items: transformItems(column5), duration: 60 },
 ];
 
+// Combine all 5 columns for mobile
+const combinedColumns = [...column1, ...column2, ...column3, ...column4, ...column5];
+
 const mobileColumns = [
-  { items: transformItems(column1.slice(0, 2)), duration: 40 },
-  { items: transformItems(column2.slice(0, 2)), duration: 40 },
+  { items: transformItems(combinedColumns.slice(0, 10)), duration: 60 }, // Column 1: Forward order
+  { items: transformItems(combinedColumns.slice(0, 10).reverse()), duration: 60 }, // Column 2: Reverse order
 ];
 
 export function MotionGrid() {
