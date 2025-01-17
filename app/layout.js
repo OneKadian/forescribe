@@ -1,4 +1,6 @@
 import { Inter } from "next/font/google";
+// import { Poppins } from "next/font/google";
+
 import "./globals.css";
 import "./global.scss";
 import { ClerkProvider } from "@clerk/nextjs";
@@ -20,7 +22,7 @@ export default function RootLayout({ children }) {
         {/* <main className={`main relative overflow-hidden`}> */}
         <body className={inter.className}>
           <ThemeProvider defaultTheme="dark" storageKey="app-theme">
-            {/* <Header /> */}
+            <Header />
             {children}
           </ThemeProvider>
         </body>

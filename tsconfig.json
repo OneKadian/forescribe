@@ -1,10 +1,6 @@
 {
   "compilerOptions": {
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
@@ -20,15 +16,19 @@
       {
         "name": "next"
       }
-    ]
+    ],
+    "baseUrl": ".", // Add baseUrl for resolving paths
+    "paths": {
+      "@/*": ["./*"] // Define the import alias
+    }
   },
   "include": [
     "next-env.d.ts",
     ".next/types/**/*.ts",
     "**/*.ts",
-    "**/*.tsx"
-, "app/components/Canvas/Room.jsx", "tailwind.config.js"  ],
-  "exclude": [
-    "node_modules"
-  ]
+    "**/*.tsx",
+    "app/components/Canvas/Room.jsx",
+    "tailwind.config.js"
+, "app/components/LoginCard.tsx"  ],
+  "exclude": ["node_modules"]
 }

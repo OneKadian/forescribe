@@ -22,19 +22,57 @@ module.exports = {
         title: ["Inter", "Sans Serif"],
       },
       fontSize: {
-        body: ["1rem", { lineHeight: "1.5rem" }],
-        h1: ["3.5rem", { lineHeight: "3.75rem" }],
-        h2: ["2.25rem", { lineHeight: "2.625rem" }],
-        h3: ["1.875rem", { lineHeight: "2.25rem" }],
-        h4: ["1.5rem", { lineHeight: "2rem" }],
-        h5: ["1.25rem", { lineHeight: "1.75rem" }],
-        h6: ["1.125rem", { lineHeight: "1.5rem" }],
-        mini: ["0.75rem", { lineHeight: "1.5rem" }],
+        body: [
+          "1rem",
+          {
+            lineHeight: "1.5rem",
+          },
+        ],
+        h1: [
+          "3.5rem",
+          {
+            lineHeight: "3.75rem",
+          },
+        ],
+        h2: [
+          "2.25rem",
+          {
+            lineHeight: "2.625rem",
+          },
+        ],
+        h3: [
+          "1.875rem",
+          {
+            lineHeight: "2.25rem",
+          },
+        ],
+        h4: [
+          "1.5rem",
+          {
+            lineHeight: "2rem",
+          },
+        ],
+        h5: [
+          "1.25rem",
+          {
+            lineHeight: "1.75rem",
+          },
+        ],
+        h6: [
+          "1.125rem",
+          {
+            lineHeight: "1.5rem",
+          },
+        ],
+        mini: [
+          "0.75rem",
+          {
+            lineHeight: "1.5rem",
+          },
+        ],
       },
       colors: {
-        // Original colors from first project
         black: {
-          DEFAULT: "#000000",
           50: "#E6E6E6",
           100: "#CCCCCC",
           200: "#999999",
@@ -45,9 +83,9 @@ module.exports = {
           700: "#000000",
           800: "#000000",
           900: "#000000",
+          DEFAULT: "#000000",
         },
         white: {
-          DEFAULT: "#FFFFFF",
           50: "#FFFFFF",
           100: "#FCFCFC",
           200: "#FCFCFC",
@@ -58,17 +96,15 @@ module.exports = {
           700: "#949494",
           800: "#636363",
           900: "#303030",
+          DEFAULT: "#FFFFFF",
         },
-        // Theme colors from second project (shadcn/ui)
+        purpleCustom: "#8B3DFF",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
-          // Preserved scales from first project
           50: "#FCFCFC",
           100: "#FCFCFC",
           200: "#FCFCFC",
@@ -80,11 +116,10 @@ module.exports = {
           800: "#A6A6A6",
           900: "#787878",
           950: "#595959",
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
-          // Preserved scales from first project
           50: "#FFF9F0",
           100: "#FFF5E5",
           200: "#FFEBCC",
@@ -96,6 +131,8 @@ module.exports = {
           800: "#C77700",
           900: "#8A5300",
           950: "#663D00",
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
@@ -130,6 +167,13 @@ module.exports = {
         tertiary: "#495E8E",
         badge: "#F1F5F9",
         badgeText: "#475569",
+        chart: {
+          1: "hsl(var(--chart-1))",
+          2: "hsl(var(--chart-2))",
+          3: "hsl(var(--chart-3))",
+          4: "hsl(var(--chart-4))",
+          5: "hsl(var(--chart-5))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -138,12 +182,20 @@ module.exports = {
       },
       keyframes: {
         "accordion-down": {
-          from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" },
+          from: {
+            height: "0",
+          },
+          to: {
+            height: "var(--radix-accordion-content-height)",
+          },
         },
         "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
+          from: {
+            height: "var(--radix-accordion-content-height)",
+          },
+          to: {
+            height: "0",
+          },
         },
       },
       animation: {
