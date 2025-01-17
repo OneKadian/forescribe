@@ -7,6 +7,7 @@ import { FaArrowRight } from "react-icons/fa";
 import { UserButton } from "@clerk/nextjs";
 import { currentUser } from "@clerk/nextjs";
 import { SignedOut, SignInButton } from "@clerk/nextjs";
+import foreLogo from "../public/foreLogo.png";
 
 const Header = async () => {
   const user = await currentUser();
@@ -14,23 +15,23 @@ const Header = async () => {
     <header
       id="header"
       // className="header fixed left-0 w-full top-0 z-30 bg-black border-b border-transparent border-gradient-to-b from-neutral-100 to-neutral-500"
-      className="header fixed left-0 w-full top-0 z-30 bg-white"
+      className="header fixed left-0 w-full top-0 z-30 bg-[#1a1a1a]"
     >
-      <div className="header--container wrap wrap-px bg-white border-[1px] border-transparent border-gradient-to-b from-neutral-100 to-neutral-500">
+      <div className="header--container wrap wrap-px bg-[#1a1a1a] border-[1px] border-transparent border-gradient-to-b from-neutral-100 to-neutral-500">
         {/* Logo here */}
-        {/* <div className="header-logo--container">
+        <div className="header-logo--container">
           <h1 className="logo mb-0">
             <Link href="/">
               <Image
-                src={Logo}
+                src={foreLogo}
                 alt="logo"
-                className="h-6 w-auto"
-                height="24"
-                width="100"
+                className="h-auto w-auto"
+                height="200"
+                width="600"
               />
             </Link>
           </h1>
-        </div> */}
+        </div>
         <div className="flex md:flex-row-reverse items-center ml-auto">
           {/* <Nav userStatus={user} /> */}
           {/* <Nav userStatus={user} /> */}
@@ -42,7 +43,7 @@ const Header = async () => {
                   href="/sign-in"
                   // className="btn btn--secondary ml-4"
                   // className="inline-flex w-full  cursor-pointer  items-center justify-center gap-3 rounded-lg px-8 py-2 font-semibold bg-clip-text text-transparent bg-gradient-to-b from-neutral-100 ml-4 to-neutral-500 border border-solid border-neutral-400 transition-colors duration-300 md:w-auto"
-                  className="w-full hidden cursor-pointer md:inline-flex mx-1 items-center justify-center gap-3 rounded-lg px-8 py-2 btn btn--secondary md:w-auto"
+                  className="w-full bg-[#8B3DFF] text-white hidden cursor-pointer md:inline-flex mx-1 items-center justify-center gap-3 rounded-lg px-8 py-2 btn btn--secondary md:w-auto"
                 >
                   Login
                   {/* <FaArrowRightLong className="text-white" /> */}
@@ -50,7 +51,7 @@ const Header = async () => {
                 </Link>
                 <Link
                   href="/sign-in"
-                  className="inline-flex text-base md:hidden mx-1 w-max cursor-pointer items-center justify-center gap-3 rounded-lg px-4 py-2 btn btn--secondary md:w-auto"
+                  className="inline-flex bg-[#8B3DFF] text-white  text-base md:hidden mx-1 w-max cursor-pointer items-center justify-center gap-3 rounded-lg px-4 py-2 btn btn--secondary md:w-auto"
                 >
                   Login
                 </Link>
@@ -61,23 +62,23 @@ const Header = async () => {
                 </SignInButton> */}
 
                 <Link
-                  href="/sign-up"
+                  href="/gallery"
                   // className="btn btn--secondary ml-4"
                   // className="inline-flex w-full  cursor-pointer  items-center justify-center gap-3 rounded-lg px-8 py-2 font-semibold bg-clip-text text-transparent bg-gradient-to-b from-neutral-100 ml-4 to-neutral-500 border border-solid border-neutral-400 transition-colors duration-300 md:w-auto"
-                  className="w-full hidden cursor-pointer mx-1 md:inline-flex items-center justify-center gap-3 rounded-lg px-8 py-2 btn btn--secondary md:w-auto"
+                  className="w-full hidden cursor-pointer bg-[#8B3DFF] text-white  mx-1 md:inline-flex items-center justify-center gap-3 rounded-lg px-8 py-2 btn btn--secondary md:w-auto"
                 >
-                  Start Manifesting
+                  Gallery
                   {/* <FaArrowRightLong className="text-white" /> */}
                 </Link>
                 <Link
-                  href="/sign-up"
+                  href="/gallery"
                   // className="btn btn--secondary ml-4"
-                  className="inline-flex mx-1 text-base md:hidden w-max cursor-pointer items-center justify-center gap-3 rounded-lg px-4 py-2 btn btn--secondary md:w-auto"
+                  className="inline-flex mx-1 text-base bg-[#8B3DFF] text-white  md:hidden w-max cursor-pointer items-center justify-center gap-3 rounded-lg px-4 py-2 btn btn--secondary md:w-auto"
                   // className="text-lg font-semibold leading-6 mx-2 inline-flex md:hidden
                   // cursor-pointer items-center justify-center gap-3 rounded-lg bg-clip-text text-transparent bg-gradient-to-b from-neutral-100 ml-4 to-neutral-500 border border-solid border-neutral-400 transition-colors duration-300
                   // "
                 >
-                  Start Manifesting
+                  Gallery
                 </Link>
               </>
             ) : (
