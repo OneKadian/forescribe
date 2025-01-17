@@ -40,7 +40,7 @@ const Header = async () => {
             {!user ? (
               <>
                 <Link
-                  href="/sign-in"
+                  href="/login"
                   // className="btn btn--secondary ml-4"
                   // className="inline-flex w-full  cursor-pointer  items-center justify-center gap-3 rounded-lg px-8 py-2 font-semibold bg-clip-text text-transparent bg-gradient-to-b from-neutral-100 ml-4 to-neutral-500 border border-solid border-neutral-400 transition-colors duration-300 md:w-auto"
                   className="w-full bg-[#8B3DFF] text-white hidden cursor-pointer md:inline-flex mx-1 items-center justify-center gap-3 rounded-lg px-8 py-2 btn btn--secondary md:w-auto"
@@ -50,7 +50,7 @@ const Header = async () => {
                   {/* <FaArrowRight className="text-black" /> */}
                 </Link>
                 <Link
-                  href="/sign-in"
+                  href="/login"
                   className="inline-flex bg-[#8B3DFF] text-white  text-base md:hidden mx-1 w-max cursor-pointer items-center justify-center gap-3 rounded-lg px-4 py-2 btn btn--secondary md:w-auto"
                 >
                   Login
