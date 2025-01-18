@@ -1,7 +1,7 @@
-0. submit to suprdense
-1. mobile view card issue
-2. 3D card: https://ui.aceternity.com/components/3d-card-effect
-3. Homepage ( pill idea ) , contact us page 
-4. Page change transition: https://blog.olivierlarose.com/articles/nextjs-page-transition-guide
-5. Implement dark mode using Tailwind’s dark mode feature ( aqua BG, white text with black cards ) 
-6. Hover effects on buttons and links.
+put almost everything on the protected route
+
+1. navbar with sidebar feature, all routes protected, gallery, contact us+ dark mode toggler + implement dark mode
+2. The homepage will have either the sign in or sign up, make a sign up page as well with login
+3. Page change transition
+4. cards will have lesser text on smaller screens + name on cards
+5. contact us form submitting, preferably slack channel 

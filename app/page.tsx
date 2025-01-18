@@ -43,7 +43,7 @@ const page = () => {
         />
         
         {/* Buttons container positioned absolutely over the hands */}
-<div className="absolute bottom-[22%] lg:mb-12 mb-[32px] left-0 right-0 flex justify-between lg:px-[20%] px-[15%]">
+<div className="absolute bottom-[22%] lg:mb-12 mb-[30px] left-0 right-0 flex justify-between lg:px-[20%] px-[15%]">
   {/* Blue pill - Login */}
   <Link href="/login">
     <button className="bg-blue-600 border border-gray-300 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors duration-300 text-sm md:text-base">

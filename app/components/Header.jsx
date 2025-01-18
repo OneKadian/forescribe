@@ -85,7 +85,7 @@ const Header = async () => {
               <div className="flex">
                 <Link
                   href="/gallery"
-                  className="inline-flex text-base mx-4 w-max cursor-pointer items-center justify-center gap-3 rounded-lg px-4 py-2 btn btn--secondary md:w-auto"
+                  className="inline-flex text-base mx-4 w-max text-white bg-[#8B3DFF] cursor-pointer items-center justify-center gap-3 rounded-lg px-4 py-2 btn btn--secondary md:w-auto"
                 >
                   Gallery
                 </Link>
