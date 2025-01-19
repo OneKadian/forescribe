@@ -14,7 +14,6 @@ export default authMiddleware({
     "/members",
     "/PrivacyPolicy",
     "Terms&Conditions",
-    "/gallery",
     "/login",
   ],
 });

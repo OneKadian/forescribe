@@ -6,11 +6,10 @@ import "./global.scss";
 import { ClerkProvider } from "@clerk/nextjs";
 import Header from "./components/Header";
 const inter = Inter({ subsets: ["latin"] });
-import { ThemeProvider } from "./components/ThemeProvider";
 
 export const metadata = {
-  title: "Indie Hacker Kit",
-  description: "Launch your Saas Today",
+  title: "Forescribe",
+  description: "Software for Softwares",
 };
 
 export default function RootLayout({ children }) {
@@ -21,10 +20,8 @@ export default function RootLayout({ children }) {
 
         {/* <main className={`main relative overflow-hidden`}> */}
         <body className={inter.className}>
-          <ThemeProvider defaultTheme="dark" storageKey="app-theme">
-            <Header />
+            <Header/>
             {children}
-          </ThemeProvider>
         </body>
         {/* </main> */}
       </html>

@@ -1,114 +1,127 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import { RxHamburgerMenu } from "react-icons/rx";
-import { FaArrowRight } from "react-icons/fa";
-import { useMemo } from "react";
-import { usePathname } from "next/navigation";
 import { RxCross1 } from "react-icons/rx";
 
 const navigation = [
-  { name: "Features", href: "/#features" },
-  { name: "Testimonials", href: "/#testimonials" },
-  { name: "FAQ?", href: "/#faq" },
+  { name: "Gallery", href: "/gallery" },
+  { name: "Contact Us", href: "/contact" },
 ];
 
-const Nav = ({ userStatus }) => {
-  const pathname = usePathname();
-  const membersNavigation = [
-    { name: "Home", href: "/" },
-    {
-      name: "Billing",
-      href: "https://billing.stripe.com/p/login/test_3csaG2csp7sj8wwbII",
-    },
-  ];
-
-  const memoizedNavigation = useMemo(() => {
-    switch (pathname) {
-      case "/members":
-        return membersNavigation;
-      case "/":
-        return navigation;
-      // ...other cases
-      default:
-        return navigation;
-    }
-  }, [pathname, navigation, membersNavigation]);
-
+const Nav = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
-  const [user, setUser] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(true);
 
-  const router = useRouter();
+  const toggleNav = () => setIsNavOpen(!isNavOpen);
+  const closeNav = () => setIsNavOpen(false);
 
-  const closeNav = () => {
-    setIsNavOpen(false);
+  const toggleTheme = () => {
+    setIsDarkMode(!isDarkMode);
+    document.documentElement.classList.toggle("dark", !isDarkMode);
   };
+
   return (
     <nav className="header-nav">
-      <div className="header-nav--container">
-        {/* Burger menu icon */}
+      <div className="header-nav--container flex items-center justify-between p-4">
+        {/* Hamburger Menu */}
         <button
-          onClick={() => setIsNavOpen(!isNavOpen)}
-          data-collapse-toggle="navbar-default"
+          onClick={toggleNav}
           type="button"
-          className={`mobile-menu text-black`}
-          // className={`mobile-menu text-white ${isNavOpen ? "hidden" : "block"}`}
-          aria-controls="navbar-dropdown"
-          aria-expanded="false"
+          className="mobile-menu text-white md:hidden"
+          aria-controls="navbar-default"
+          aria-expanded={isNavOpen}
         >
-          <span className="sr-only">Open main menu</span>
-          <RxHamburgerMenu
-            icon="material-symbols:menu-rounded"
-            className="h-10 w-auto text-black"
-          />
+          <RxHamburgerMenu className="h-8 w-auto" />
         </button>
-        {/* {!userStatus && <UserButton afterSignOutUrl="/" />} */}
-        {/* Sidebar */}
-        <div
-          className={`header-nav--menu-container z-20 ${
-            isNavOpen ? "show" : "hide"
-          }`}
-          id="navbar-default"
-        >
-          <ul className="header-nav--menu mr-4">
-            <div className="flex justify-end px-4">
+
+        {/* Desktop Menu */}
+        <ul className="hidden md:flex space-x-6 mr-4">
+          {navigation.map((item) => (
+            <li key={item.name}>
+              <Link href={item.href} className="text-white hover:underline">
+                {item.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+
+        {/* Toggler and Login */}
+        <div className="flex items-center ml-2 space-x-4">
+          {/* Light/Dark Mode Toggler */}
+          <button
+            type="button"
+            onClick={toggleTheme}
+            className="font-medium text-gray-800 rounded-full border border-gray-300 bg-gray-100 hover:bg-gray-200 focus:outline-none focus:bg-gray-200 dark:text-neutral-200 dark:bg-neutral-700 dark:border-gray-600 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800"
+          >
+            <span className="group inline-flex shrink-0 justify-center items-center size-9">
+              {isDarkMode ? (
+                <svg
+                  className="shrink-0 size-4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <circle cx="12" cy="12" r="4"></circle>
+                  <path d="M12 2v2"></path>
+                  <path d="M12 20v2"></path>
+                  <path d="m4.93 4.93 1.41 1.41"></path>
+                  <path d="m17.66 17.66 1.41 1.41"></path>
+                  <path d="M2 12h2"></path>
+                  <path d="M20 12h2"></path>
+                  <path d="m6.34 17.66-1.41 1.41"></path>
+                  <path d="m19.07 4.93-1.41 1.41"></path>
+                </svg>
+              ) : (
+                <svg
+                  className="shrink-0 size-4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+                </svg>
+              )}
+            </span>
+          </button>
+        </div>
+
+        {/* Mobile Menu */}
+        {isNavOpen && (
+          <div className="fixed top-0 left-0 z-30 w-full h-full bg-black border-t border-gray-300">
+            <div className="flex justify-end p-4">
               <RxCross1
-                className="text-2xl text-black cursor-pointer md:hidden"
-                onClick={() => setIsNavOpen(!isNavOpen)}
+                className="text-2xl text-white cursor-pointer"
+                onClick={closeNav}
               />
             </div>
-            {memoizedNavigation.map((item) => (
-              <li
-                key={item.name}
-                className={
-                  item.isArrow
-                    ? `inline-flex cursor-pointer ${
-                        user ? "block" : "hidden"
-                      } gap-3 rounded-lg justify-center lg:hidden md:hidden font-semibold text-black w-[30%]`
-                    : "header-nav--menu-item"
-                }
-              >
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className={`menu-item--link flex items-center
-                                ${router.pathname === item.href ? "active" : ""}
-                              `}
-                  onClick={closeNav}
-                  target={item.target ? item.target : "_self"}
-                >
-                  {item.name}
-                  {item.isArrow && (
-                    <span className="ml-2 inline-block text-sm font-medium text-inherit">
-                      <FaArrowRight className="h-4 w-auto text-black" />
-                    </span>
-                  )}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
+            <ul className="flex flex-col items-center space-y-6 mt-10">
+              {navigation.map((item) => (
+                <li key={item.name}>
+                  <Link
+                    href={item.href}
+                    className="text-white text-lg hover:underline"
+                    onClick={closeNav}
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
     </nav>
   );

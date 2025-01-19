@@ -5,3 +5,4 @@ put almost everything on the protected route
 3. Page change transition
 4. cards will have lesser text on smaller screens + name on cards
 5. contact us form submitting, preferably slack channel 
+6. Animated form 
