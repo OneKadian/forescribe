@@ -13,7 +13,7 @@ const LoginPage = () => {
       {/* Motion Grid Background Container */}
       <div className="fixed inset-0 h-screen w-full bg-zinc-950">
         <div className="relative h-full overflow-hidden">
-          <MotionGrid />
+          <MotionGrid firstName="" />
         </div>
       </div>
 

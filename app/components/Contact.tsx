@@ -1,6 +1,7 @@
 "use client"; // Marks this component as a Client Component
 
 import React from "react";
+import {Input} from "@heroui/input";
 
 interface ContactProps {
   firstName: string | null;
