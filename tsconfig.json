@@ -29,6 +29,6 @@
     "**/*.tsx",
     "app/components/Canvas/Room.jsx",
     "tailwind.config.js"
-, "app/components/LoginCard.tsx"  ],
+, "app/components/LoginCard.tsx", "app/page.jsx"  ],
   "exclude": ["node_modules"]
 }

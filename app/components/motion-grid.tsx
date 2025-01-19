@@ -178,7 +178,7 @@ const mobileColumns = [
   { items: transformItems(combinedColumns.slice(0, 10).reverse()), duration: 60 },
 ];
 
-export function MotionGrid() {
+export function MotionGrid({firstName}) {
   const [mounted, setMounted] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -198,13 +198,13 @@ export function MotionGrid() {
 
   return (
     <div
-      className={`grid h-full w-full gap-2 ${
+      className={`grid bg-gray-300 dark:bg-black h-full w-full gap-2 ${
         isMobile ? "grid-cols-2" : "grid-cols-5"
       }`}
     >
       {columns.map((column, index) => (
         <div key={index} className={`${getColumnOffset(index)}`}>
-          <Column items={column.items} duration={column.duration} />
+          <Column items={column.items} duration={column.duration} firstName={firstName} />
         </div>
       ))}
     </div>

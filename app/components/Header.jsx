@@ -13,10 +13,9 @@ const Header = async () => {
   return (
     <header
       id="header"
-      // className="header fixed left-0 w-full top-0 z-30 bg-black border-b border-transparent border-gradient-to-b from-neutral-100 to-neutral-500"
-      className="header fixed left-0 w-full top-0 z-30 bg-[#1a1a1a]"
+      className="header fixed left-0 w-full top-0 z-30 bg-[#35363a] dark:bg-[#1a1a1a]"
     >
-      <div className="header--container wrap wrap-px bg-[#1a1a1a] border-[1px] border-transparent border-gradient-to-b from-neutral-100 to-neutral-500">
+      <div className="header--container wrap wrap-px bg-[#35363a] dark:bg-[#1a1a1a] border-[1px] border-transparent border-gradient-to-b from-neutral-100 to-neutral-500">
         {/* Logo here */}
         <div className="header-logo--container">
           {/* Logo */}
@@ -31,29 +30,19 @@ const Header = async () => {
           </Link>
         </div>
         <div className="flex md:flex-row-reverse items-center ml-auto">
-          {/* <Nav userStatus={user} /> */}
-          {/* <Nav userStatus={user} /> */}
-          {/* <ButtonGroup className="hidden md:block"> */}
           <ButtonGroup className="block mx-2 md:mx-0">
             {!user ? (
               <>
                 <Link
-                  href="/sign-in"
-                  // className="btn btn--secondary ml-4"
-                  // className="inline-flex w-full  cursor-pointer  items-center justify-center gap-3 rounded-lg px-8 py-2 font-semibold bg-clip-text text-transparent bg-gradient-to-b from-neutral-100 ml-4 to-neutral-500 border border-solid border-neutral-400 transition-colors duration-300 md:w-auto"
-                  className="w-full bg-[#8B3DFF] text-white  hidden cursor-pointer md:inline-flex items-center justify-center gap-3 rounded-lg px-8 py-2 btn btn--secondary md:w-auto"
+                  href="/login"
+                  className="w-full bg-[#8B3DFF] text-white hidden cursor-pointer md:inline-flex items-center justify-center gap-3 rounded-lg px-8 py-2 btn btn--secondary md:w-auto hover:bg-[#7B2FFF] transition-colors"
                 >
                   Login
-                  {/* <FaArrowRightLong className="text-white" /> */}
                   <FaArrowRight className="text-white" />
                 </Link>
                 <Link
-                  href="/sign-in"
-                  // className="btn btn--secondary ml-4"
-                  className="inline-flex bg-[#8B3DFF] text-white  text-base md:hidden w-max cursor-pointer items-center justify-center gap-3 rounded-lg px-4 py-2 btn btn--secondary md:w-auto"
-                  // className="text-lg font-semibold leading-6 mx-2 inline-flex md:hidden
-                  // cursor-pointer items-center justify-center gap-3 rounded-lg bg-clip-text text-transparent bg-gradient-to-b from-neutral-100 ml-4 to-neutral-500 border border-solid border-neutral-400 transition-colors duration-300
-                  // "
+                  href="/login"
+                  className="inline-flex bg-[#8B3DFF] text-white text-base md:hidden w-max cursor-pointer items-center justify-center gap-3 rounded-lg px-4 py-2 btn btn--secondary md:w-auto hover:bg-[#7B2FFF] transition-colors"
                 >
                   Login
                 </Link>

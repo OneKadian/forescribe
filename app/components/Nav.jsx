@@ -1,24 +1,30 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { RxCross1 } from "react-icons/rx";
 
 const navigation = [
   { name: "Gallery", href: "/gallery" },
-  { name: "Contact Us", href: "/contact" },
+  { name: "Contact Us", href: "/Contact" },
 ];
 
 const Nav = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(true);
 
+  // Initialize dark mode on component mount
+  useEffect(() => {
+    document.documentElement.classList.add("dark");
+  }, []);
+
   const toggleNav = () => setIsNavOpen(!isNavOpen);
   const closeNav = () => setIsNavOpen(false);
 
   const toggleTheme = () => {
-    setIsDarkMode(!isDarkMode);
-    document.documentElement.classList.toggle("dark", !isDarkMode);
+    const newDarkMode = !isDarkMode;
+    setIsDarkMode(newDarkMode);
+    document.documentElement.classList.toggle("dark", newDarkMode);
   };
 
   return (
@@ -36,7 +42,7 @@ const Nav = () => {
         </button>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex space-x-6 mr-4">
+        <ul className="hidden md:flex space-x-6 mr-2">
           {navigation.map((item) => (
             <li key={item.name}>
               <Link href={item.href} className="text-white hover:underline">
@@ -55,7 +61,7 @@ const Nav = () => {
             className="font-medium text-gray-800 rounded-full border border-gray-300 bg-gray-100 hover:bg-gray-200 focus:outline-none focus:bg-gray-200 dark:text-neutral-200 dark:bg-neutral-700 dark:border-gray-600 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800"
           >
             <span className="group inline-flex shrink-0 justify-center items-center size-9">
-              {isDarkMode ? (
+              {!isDarkMode ? ( // Swapped the condition
                 <svg
                   className="shrink-0 size-4"
                   xmlns="http://www.w3.org/2000/svg"
@@ -100,7 +106,7 @@ const Nav = () => {
 
         {/* Mobile Menu */}
         {isNavOpen && (
-          <div className="fixed top-0 left-0 z-30 w-full h-full bg-black border-t border-gray-300">
+          <div className="fixed top-0 left-0 z-30 w-full h-full bg-[#35363a] dark:bg-[#1a1a1a] border-t border-gray-300">
             <div className="flex justify-end p-4">
               <RxCross1
                 className="text-2xl text-white cursor-pointer"

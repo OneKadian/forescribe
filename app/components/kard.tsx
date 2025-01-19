@@ -1,4 +1,3 @@
-// Card.tsx
 "use client";
 
 import React, {
@@ -19,12 +18,27 @@ interface CardProps {
   type: string;
   logo: string;
   bgColor: string;
+  firstName: string
   onHover?: (isHovering: boolean) => void;
 }
 
-export function Card({ name, type, logo, bgColor, onHover }: CardProps) {
+export function Card({ name, type, logo, bgColor, onHover, firstName }: CardProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [isMouseEntered, setIsMouseEntered] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768); // Adjust breakpoint as needed
+    };
+
+    handleResize(); // Initial check
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const truncatedType =
+    isMobile && type.length > 48 ? `${type.substring(0, 48)}...` : type;
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!containerRef.current) return;
@@ -91,8 +105,12 @@ export function Card({ name, type, logo, bgColor, onHover }: CardProps) {
             className="mt-3 space-y-1 text-center"
             style={{ transform: `translateZ(${isMouseEntered ? "40px" : "0px"})` }}
           >
-            <h3 className="text-xl font-semibold text-[#19154E]">{name}</h3>
-            <p className="text-sm font-semibold text-black">{type}</p>
+            {/* <h3 className="text-xl font-semibold text-[#19154E]">{name}</h3> */}
+            <h3 className="text-xl font-semibold text-[#19154E]">
+  {name === "Andrew" ? firstName : name}
+</h3>
+
+            <p className="text-sm font-semibold text-black">{truncatedType}</p>
           </div>
         </div>
       </div>

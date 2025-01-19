@@ -13,9 +13,10 @@ interface ColumnProps {
     bgColor: string;
   }[];
   duration: number;
+  firstName: string
 }
 
-const Column = ({ items, duration }: ColumnProps) => {
+const Column = ({ items, duration, firstName }: ColumnProps) => {
   const doubledItems = [...items, ...items];
   const controls = useAnimationControls();
   const [isHovered, setIsHovered] = useState(false);
@@ -74,6 +75,7 @@ const Column = ({ items, duration }: ColumnProps) => {
             key={`${item.name}-${index}`}
             {...item}
             onHover={handleCardHover}
+            firstName={firstName}
           />
         ))}
       </motion.div>
