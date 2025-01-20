@@ -34,10 +34,8 @@ npm install
 
 ```
 
-npm run dev
-
 ```
-
+npm run dev
 ```
 
 Configuration
@@ -52,6 +50,5 @@ Add the following environment variables:
 -CLERK_SECRET_KEY=<your-clerk-secret-key>
 -NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
 -NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
--NEXT_PUBLIC_SLACK_URL=<your-slack-webhook-url>
-
+NEXT_PUBLIC_SLACK_URL=<your-slack-webhook-url>
 ```
