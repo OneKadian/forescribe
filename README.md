@@ -29,22 +29,29 @@ git clone https://github.com/OneKadian/forescribe
 cd forescribe
 ```
 
+```
 npm install
 
 ```
+
 npm run dev
+
 ```
 
 ```
-## Configuration
+
+Configuration
+
 To run this project, you will need a Clerk account for authentication and a Slack Webhook URL to handle form submissions.
 
 Create a .env.local file in the root directory.
 Add the following environment variables:
-```
 
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=<your-clerk-publishable-key>
-CLERK_SECRET_KEY=<your-clerk-secret-key>
-NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
-NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
-NEXT_PUBLIC_SLACK_URL=<your-slack-webhook-url>
+```
+-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=<your-clerk-publishable-key>
+-CLERK_SECRET_KEY=<your-clerk-secret-key>
+-NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+-NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+-NEXT_PUBLIC_SLACK_URL=<your-slack-webhook-url>
+
+```
