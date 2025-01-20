@@ -1,7 +1,8 @@
 import { Button } from "./ui/button";
 import pic from "../public/133aaa01-14db-4f50-8526-e8a5413bbb4c.png"
 import Image from "next/image";
-import Link from "next/link";
+// import Link from "next/link";
+import { Link } from "next-view-transitions";
 
 // import Link from 'next/link'
 

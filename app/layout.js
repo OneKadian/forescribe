@@ -6,6 +6,7 @@ import "./global.scss";
 import { ClerkProvider } from "@clerk/nextjs";
 import Header from "./components/Header";
 const inter = Inter({ subsets: ["latin"] });
+import { ViewTransitions } from "next-view-transitions";
 
 export const metadata = {
   title: "Forescribe",
@@ -15,16 +16,18 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <ClerkProvider>
-      <html lang="en">
-        {/* <main className={`main relative overflow-hidden ${className}`}> */}
+      <ViewTransitions>
+        <html lang="en">
+          {/* <main className={`main relative overflow-hidden ${className}`}> */}
 
-        {/* <main className={`main relative overflow-hidden`}> */}
-        <body className={inter.className}>
-            <Header/>
+          {/* <main className={`main relative overflow-hidden`}> */}
+          <body className={inter.className}>
+            <Header />
             {children}
-        </body>
-        {/* </main> */}
-      </html>
+          </body>
+          {/* </main> */}
+        </html>
+      </ViewTransitions>
     </ClerkProvider>
   );
 }

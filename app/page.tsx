@@ -1,4 +1,6 @@
-import Link from "next/link";
+// import Link from "next/link";
+import { Link } from "next-view-transitions";
+
 const page = () => {
   return (
     // <div className="min-h-screen bg-[#35363a] flex flex-col items-center justify-center p-4">
